@@ -38,7 +38,7 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class Ticker implements ModelInterface
+class Ticker implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -585,14 +585,8 @@ class Ticker implements ModelInterface
 
         return $this;
     }
-    /**
-     * Returns true if offset exists. False otherwise.
-     *
-     * @param mixed $offset Offset
-     *
-     * @return boolean
-     */
-    public function offsetExists($offset)
+
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
