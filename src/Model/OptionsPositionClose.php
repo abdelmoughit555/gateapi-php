@@ -1,4 +1,5 @@
 <?php
+
 /**
  * OptionsPositionClose
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class OptionsPositionClose implements ModelInterface, ArrayAccess
+class OptionsPositionClose implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'OptionsPositionClose';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'time' => 'double',
         'contract' => 'string',
@@ -63,10 +64,10 @@ class OptionsPositionClose implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'time' => 'double',
         'contract' => null,
@@ -182,9 +183,9 @@ class OptionsPositionClose implements ModelInterface, ArrayAccess
 
     const SIDE_LONG = 'long';
     const SIDE_SHORT = 'short';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -197,14 +198,14 @@ class OptionsPositionClose implements ModelInterface, ArrayAccess
             self::SIDE_SHORT,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -482,5 +483,3 @@ class OptionsPositionClose implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

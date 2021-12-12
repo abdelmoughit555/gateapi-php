@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AutoRepaySetting
  *
@@ -37,31 +38,31 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class AutoRepaySetting implements ModelInterface, ArrayAccess
+class AutoRepaySetting implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'AutoRepaySetting';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'status' => 'string'
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'status' => null
     ];
@@ -157,9 +158,9 @@ class AutoRepaySetting implements ModelInterface, ArrayAccess
 
     const STATUS_ON = 'on';
     const STATUS_OFF = 'off';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -172,14 +173,14 @@ class AutoRepaySetting implements ModelInterface, ArrayAccess
             self::STATUS_OFF,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -332,5 +333,3 @@ class AutoRepaySetting implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

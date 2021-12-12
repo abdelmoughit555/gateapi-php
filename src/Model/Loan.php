@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Loan
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class Loan implements ModelInterface, ArrayAccess
+class Loan implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'Loan';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'id' => 'string',
         'create_time' => 'string',
@@ -76,10 +77,10 @@ class Loan implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'id' => null,
         'create_time' => null,
@@ -247,9 +248,9 @@ class Loan implements ModelInterface, ArrayAccess
     const STATUS_AUTO_REPAID = 'auto_repaid';
     const SIDE_LEND = 'lend';
     const SIDE_BORROW = 'borrow';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -264,7 +265,7 @@ class Loan implements ModelInterface, ArrayAccess
             self::STATUS_AUTO_REPAID,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -277,14 +278,14 @@ class Loan implements ModelInterface, ArrayAccess
             self::SIDE_BORROW,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -888,5 +889,3 @@ class Loan implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

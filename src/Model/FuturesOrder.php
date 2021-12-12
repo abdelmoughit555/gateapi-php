@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FuturesOrder
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class FuturesOrder implements ModelInterface, ArrayAccess
+class FuturesOrder implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'FuturesOrder';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'id' => 'int',
         'user' => 'int',
@@ -81,10 +82,10 @@ class FuturesOrder implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'id' => 'int64',
         'user' => null,
@@ -281,9 +282,9 @@ class FuturesOrder implements ModelInterface, ArrayAccess
     const TIF_POC = 'poc';
     const AUTO_SIZE_LONG = 'close_long';
     const AUTO_SIZE_SHORT = 'close_short';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -302,7 +303,7 @@ class FuturesOrder implements ModelInterface, ArrayAccess
             self::FINISH_AS_REDUCE_OUT,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -315,7 +316,7 @@ class FuturesOrder implements ModelInterface, ArrayAccess
             self::STATUS_FINISHED,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -329,7 +330,7 @@ class FuturesOrder implements ModelInterface, ArrayAccess
             self::TIF_POC,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -342,14 +343,14 @@ class FuturesOrder implements ModelInterface, ArrayAccess
             self::AUTO_SIZE_SHORT,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -1109,5 +1110,3 @@ class FuturesOrder implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

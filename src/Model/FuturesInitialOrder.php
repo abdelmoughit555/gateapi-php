@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FuturesInitialOrder
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class FuturesInitialOrder implements ModelInterface, ArrayAccess
+class FuturesInitialOrder implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'FuturesInitialOrder';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'contract' => 'string',
         'size' => 'int',
@@ -66,10 +67,10 @@ class FuturesInitialOrder implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'contract' => null,
         'size' => 'int64',
@@ -197,9 +198,9 @@ class FuturesInitialOrder implements ModelInterface, ArrayAccess
 
     const TIF_GTC = 'gtc';
     const TIF_IOC = 'ioc';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -212,14 +213,14 @@ class FuturesInitialOrder implements ModelInterface, ArrayAccess
             self::TIF_IOC,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -578,5 +579,3 @@ class FuturesInitialOrder implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

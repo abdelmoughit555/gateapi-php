@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CurrencyPair
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class CurrencyPair implements ModelInterface, ArrayAccess
+class CurrencyPair implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'CurrencyPair';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'id' => 'string',
         'base' => 'string',
@@ -69,10 +70,10 @@ class CurrencyPair implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'id' => null,
         'base' => null,
@@ -210,9 +211,9 @@ class CurrencyPair implements ModelInterface, ArrayAccess
     const TRADE_STATUS_BUYABLE = 'buyable';
     const TRADE_STATUS_SELLABLE = 'sellable';
     const TRADE_STATUS_TRADABLE = 'tradable';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -227,14 +228,14 @@ class CurrencyPair implements ModelInterface, ArrayAccess
             self::TRADE_STATUS_TRADABLE,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -637,5 +638,3 @@ class CurrencyPair implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

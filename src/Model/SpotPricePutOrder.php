@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SpotPricePutOrder
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class SpotPricePutOrder implements ModelInterface, ArrayAccess
+class SpotPricePutOrder implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'SpotPricePutOrder';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'type' => 'string',
         'side' => 'string',
@@ -63,10 +64,10 @@ class SpotPricePutOrder implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'type' => null,
         'side' => null,
@@ -186,9 +187,9 @@ class SpotPricePutOrder implements ModelInterface, ArrayAccess
     const ACCOUNT_MARGIN = 'margin';
     const TIME_IN_FORCE_GTC = 'gtc';
     const TIME_IN_FORCE_IOC = 'ioc';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -201,7 +202,7 @@ class SpotPricePutOrder implements ModelInterface, ArrayAccess
             self::SIDE_SELL,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -214,7 +215,7 @@ class SpotPricePutOrder implements ModelInterface, ArrayAccess
             self::ACCOUNT_MARGIN,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -227,14 +228,14 @@ class SpotPricePutOrder implements ModelInterface, ArrayAccess
             self::TIME_IN_FORCE_IOC,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -558,5 +559,3 @@ class SpotPricePutOrder implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

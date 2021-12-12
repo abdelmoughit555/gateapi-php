@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Contract
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class Contract implements ModelInterface, ArrayAccess
+class Contract implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'Contract';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'name' => 'string',
         'type' => 'string',
@@ -90,10 +91,10 @@ class Contract implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'name' => null,
         'type' => null,
@@ -315,9 +316,9 @@ class Contract implements ModelInterface, ArrayAccess
     const TYPE_DIRECT = 'direct';
     const MARK_TYPE_INTERNAL = 'internal';
     const MARK_TYPE_INDEX = 'index';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -330,7 +331,7 @@ class Contract implements ModelInterface, ArrayAccess
             self::TYPE_DIRECT,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -343,14 +344,14 @@ class Contract implements ModelInterface, ArrayAccess
             self::MARK_TYPE_INDEX,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -1295,5 +1296,3 @@ class Contract implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

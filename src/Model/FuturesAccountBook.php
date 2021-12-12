@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FuturesAccountBook
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class FuturesAccountBook implements ModelInterface, ArrayAccess
+class FuturesAccountBook implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'FuturesAccountBook';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'time' => 'double',
         'change' => 'string',
@@ -62,10 +63,10 @@ class FuturesAccountBook implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'time' => 'double',
         'change' => null,
@@ -183,9 +184,9 @@ class FuturesAccountBook implements ModelInterface, ArrayAccess
     const TYPE_POINT_DNW = 'point_dnw';
     const TYPE_POINT_FEE = 'point_fee';
     const TYPE_POINT_REFR = 'point_refr';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -204,14 +205,14 @@ class FuturesAccountBook implements ModelInterface, ArrayAccess
             self::TYPE_POINT_REFR,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -464,5 +465,3 @@ class FuturesAccountBook implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Order
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class Order implements ModelInterface, ArrayAccess
+class Order implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'Order';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'id' => 'string',
         'text' => 'string',
@@ -85,10 +86,10 @@ class Order implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'id' => null,
         'text' => null,
@@ -298,9 +299,9 @@ class Order implements ModelInterface, ArrayAccess
     const TIME_IN_FORCE_GTC = 'gtc';
     const TIME_IN_FORCE_IOC = 'ioc';
     const TIME_IN_FORCE_POC = 'poc';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -314,7 +315,7 @@ class Order implements ModelInterface, ArrayAccess
             self::STATUS_CANCELLED,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -326,7 +327,7 @@ class Order implements ModelInterface, ArrayAccess
             self::TYPE_LIMIT,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -340,7 +341,7 @@ class Order implements ModelInterface, ArrayAccess
             self::ACCOUNT_CROSS_MARGIN,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -353,7 +354,7 @@ class Order implements ModelInterface, ArrayAccess
             self::SIDE_SELL,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -367,14 +368,14 @@ class Order implements ModelInterface, ArrayAccess
             self::TIME_IN_FORCE_POC,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -1257,5 +1258,3 @@ class Order implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

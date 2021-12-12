@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Position
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class Position implements ModelInterface, ArrayAccess
+class Position implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'Position';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'user' => 'int',
         'contract' => 'string',
@@ -81,10 +82,10 @@ class Position implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'user' => 'int64',
         'contract' => null,
@@ -269,9 +270,9 @@ class Position implements ModelInterface, ArrayAccess
     const MODE_SINGLE = 'single';
     const MODE_DUAL_LONG = 'dual_long';
     const MODE_DUAL_SHORT = 'dual_short';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -285,14 +286,14 @@ class Position implements ModelInterface, ArrayAccess
             self::MODE_DUAL_SHORT,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -995,5 +996,3 @@ class Position implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

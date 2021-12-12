@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Transfer
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class Transfer implements ModelInterface, ArrayAccess
+class Transfer implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'Transfer';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'currency' => 'string',
         'from' => 'string',
@@ -64,10 +65,10 @@ class Transfer implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'currency' => null,
         'from' => null,
@@ -193,9 +194,9 @@ class Transfer implements ModelInterface, ArrayAccess
     const TO_DELIVERY = 'delivery';
     const TO_CROSS_MARGIN = 'cross_margin';
     const TO_OPTIONS = 'options';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -212,7 +213,7 @@ class Transfer implements ModelInterface, ArrayAccess
             self::FROM_OPTIONS,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -229,14 +230,14 @@ class Transfer implements ModelInterface, ArrayAccess
             self::TO_OPTIONS,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -543,5 +544,3 @@ class Transfer implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

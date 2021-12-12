@@ -1,4 +1,5 @@
 <?php
+
 /**
  * LoanPatch
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class LoanPatch implements ModelInterface, ArrayAccess
+class LoanPatch implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'LoanPatch';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'currency' => 'string',
         'side' => 'string',
@@ -62,10 +63,10 @@ class LoanPatch implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'currency' => null,
         'side' => null,
@@ -177,9 +178,9 @@ class LoanPatch implements ModelInterface, ArrayAccess
 
     const SIDE_LEND = 'lend';
     const SIDE_BORROW = 'borrow';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -192,14 +193,14 @@ class LoanPatch implements ModelInterface, ArrayAccess
             self::SIDE_BORROW,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -461,5 +462,3 @@ class LoanPatch implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

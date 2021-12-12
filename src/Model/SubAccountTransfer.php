@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SubAccountTransfer
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class SubAccountTransfer implements ModelInterface, ArrayAccess
+class SubAccountTransfer implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'SubAccountTransfer';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'currency' => 'string',
         'sub_account' => 'string',
@@ -65,10 +66,10 @@ class SubAccountTransfer implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'currency' => null,
         'sub_account' => null,
@@ -194,9 +195,9 @@ class SubAccountTransfer implements ModelInterface, ArrayAccess
     const DIRECTION_FROM = 'from';
     const SUB_ACCOUNT_TYPE_SPOT = 'spot';
     const SUB_ACCOUNT_TYPE_FUTURES = 'futures';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -209,7 +210,7 @@ class SubAccountTransfer implements ModelInterface, ArrayAccess
             self::DIRECTION_FROM,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -222,14 +223,14 @@ class SubAccountTransfer implements ModelInterface, ArrayAccess
             self::SUB_ACCOUNT_TYPE_FUTURES,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -586,5 +587,3 @@ class SubAccountTransfer implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

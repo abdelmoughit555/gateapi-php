@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FuturesPriceTrigger
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class FuturesPriceTrigger implements ModelInterface, ArrayAccess
+class FuturesPriceTrigger implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'FuturesPriceTrigger';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'strategy_type' => 'int',
         'price_type' => 'int',
@@ -62,10 +63,10 @@ class FuturesPriceTrigger implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'strategy_type' => null,
         'price_type' => null,
@@ -182,9 +183,9 @@ class FuturesPriceTrigger implements ModelInterface, ArrayAccess
     const PRICE_TYPE_2 = 2;
     const RULE_1 = 1;
     const RULE_2 = 2;
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -197,7 +198,7 @@ class FuturesPriceTrigger implements ModelInterface, ArrayAccess
             self::STRATEGY_TYPE_1,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -211,7 +212,7 @@ class FuturesPriceTrigger implements ModelInterface, ArrayAccess
             self::PRICE_TYPE_2,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -224,14 +225,14 @@ class FuturesPriceTrigger implements ModelInterface, ArrayAccess
             self::RULE_2,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -518,5 +519,3 @@ class FuturesPriceTrigger implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

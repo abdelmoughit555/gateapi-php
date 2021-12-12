@@ -1,4 +1,5 @@
 <?php
+
 /**
  * AccountBalance
  *
@@ -38,32 +39,32 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class AccountBalance implements ModelInterface, ArrayAccess
+class AccountBalance implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'AccountBalance';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'amount' => 'string',
         'currency' => 'string'
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'amount' => null,
         'currency' => null
@@ -165,9 +166,9 @@ class AccountBalance implements ModelInterface, ArrayAccess
     const CURRENCY_CNY = 'CNY';
     const CURRENCY_USD = 'USD';
     const CURRENCY_USDT = 'USDT';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -182,14 +183,14 @@ class AccountBalance implements ModelInterface, ArrayAccess
             self::CURRENCY_USDT,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -367,5 +368,3 @@ class AccountBalance implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

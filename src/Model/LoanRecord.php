@@ -1,4 +1,5 @@
 <?php
+
 /**
  * LoanRecord
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class LoanRecord implements ModelInterface, ArrayAccess
+class LoanRecord implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'LoanRecord';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'id' => 'string',
         'loan_id' => 'string',
@@ -72,10 +73,10 @@ class LoanRecord implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'id' => null,
         'loan_id' => null,
@@ -223,9 +224,9 @@ class LoanRecord implements ModelInterface, ArrayAccess
 
     const STATUS_LOANED = 'loaned';
     const STATUS_FINISHED = 'finished';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -238,14 +239,14 @@ class LoanRecord implements ModelInterface, ArrayAccess
             self::STATUS_FINISHED,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -723,5 +724,3 @@ class LoanRecord implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

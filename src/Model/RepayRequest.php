@@ -1,4 +1,5 @@
 <?php
+
 /**
  * RepayRequest
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class RepayRequest implements ModelInterface, ArrayAccess
+class RepayRequest implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'RepayRequest';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'currency_pair' => 'string',
         'currency' => 'string',
@@ -61,10 +62,10 @@ class RepayRequest implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'currency_pair' => null,
         'currency' => null,
@@ -172,9 +173,9 @@ class RepayRequest implements ModelInterface, ArrayAccess
 
     const MODE_ALL = 'all';
     const MODE_PARTIAL = 'partial';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -187,14 +188,14 @@ class RepayRequest implements ModelInterface, ArrayAccess
             self::MODE_PARTIAL,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -431,5 +432,3 @@ class RepayRequest implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

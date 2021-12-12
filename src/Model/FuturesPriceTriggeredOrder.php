@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FuturesPriceTriggeredOrder
  *
@@ -38,22 +39,22 @@ use \GateApi\ObjectSerializer;
  * @author      GateIO
  * @link        https://www.gate.io
  */
-class FuturesPriceTriggeredOrder implements ModelInterface, ArrayAccess
+class FuturesPriceTriggeredOrder implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'FuturesPriceTriggeredOrder';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'initial' => '\GateApi\Model\FuturesInitialOrder',
         'trigger' => '\GateApi\Model\FuturesPriceTrigger',
@@ -68,10 +69,10 @@ class FuturesPriceTriggeredOrder implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'initial' => null,
         'trigger' => null,
@@ -207,9 +208,9 @@ class FuturesPriceTriggeredOrder implements ModelInterface, ArrayAccess
     const FINISH_AS_SUCCEEDED = 'succeeded';
     const FINISH_AS_FAILED = 'failed';
     const FINISH_AS_EXPIRED = 'expired';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -222,7 +223,7 @@ class FuturesPriceTriggeredOrder implements ModelInterface, ArrayAccess
             self::STATUS_FINISHED,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -237,14 +238,14 @@ class FuturesPriceTriggeredOrder implements ModelInterface, ArrayAccess
             self::FINISH_AS_EXPIRED,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -645,5 +646,3 @@ class FuturesPriceTriggeredOrder implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

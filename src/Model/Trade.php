@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Trade
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class Trade implements ModelInterface, ArrayAccess
+class Trade implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'Trade';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'id' => 'string',
         'create_time' => 'string',
@@ -70,10 +71,10 @@ class Trade implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'id' => null,
         'create_time' => null,
@@ -219,9 +220,9 @@ class Trade implements ModelInterface, ArrayAccess
     const SIDE_SELL = 'sell';
     const ROLE_TAKER = 'taker';
     const ROLE_MAKER = 'maker';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -234,7 +235,7 @@ class Trade implements ModelInterface, ArrayAccess
             self::SIDE_SELL,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -247,14 +248,14 @@ class Trade implements ModelInterface, ArrayAccess
             self::ROLE_MAKER,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -724,5 +725,3 @@ class Trade implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

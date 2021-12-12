@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CrossMarginLoan
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class CrossMarginLoan implements ModelInterface, ArrayAccess
+class CrossMarginLoan implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'CrossMarginLoan';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'id' => 'string',
         'create_time' => 'int',
@@ -67,10 +68,10 @@ class CrossMarginLoan implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'id' => null,
         'create_time' => 'int64',
@@ -203,9 +204,9 @@ class CrossMarginLoan implements ModelInterface, ArrayAccess
     const STATUS_1 = 1;
     const STATUS_2 = 2;
     const STATUS_3 = 3;
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -219,14 +220,14 @@ class CrossMarginLoan implements ModelInterface, ArrayAccess
             self::STATUS_3,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -610,5 +611,3 @@ class CrossMarginLoan implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

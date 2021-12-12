@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CrossMarginAccountBook
  *
@@ -37,22 +38,22 @@ use \GateApi\ObjectSerializer;
  * @author   GateIO
  * @link     https://www.gate.io
  */
-class CrossMarginAccountBook implements ModelInterface, ArrayAccess
+class CrossMarginAccountBook implements ModelInterface
 {
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $openAPIModelName = 'CrossMarginAccountBook';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPITypes = [
         'id' => 'string',
         'time' => 'int',
@@ -63,10 +64,10 @@ class CrossMarginAccountBook implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $openAPIFormats = [
         'id' => null,
         'time' => 'int64',
@@ -189,9 +190,9 @@ class CrossMarginAccountBook implements ModelInterface, ArrayAccess
     const TYPE_REFERRAL_FEE = 'referral_fee';
     const TYPE_ORDER_FEE = 'order_fee';
     const TYPE_UNKNOWN = 'unknown';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -211,14 +212,14 @@ class CrossMarginAccountBook implements ModelInterface, ArrayAccess
             self::TYPE_UNKNOWN,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
@@ -496,5 +497,3 @@ class CrossMarginAccountBook implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
