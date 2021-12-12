@@ -592,6 +592,7 @@ class Ticker implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
+
     #[\ReturnTypeWillChange]
     public function offsetExists(mixed $offset): bool
     {
