@@ -588,13 +588,13 @@ class Ticker implements ModelInterface, ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param mixed $offset Offset
      *
      * @return boolean
      */
-    public function offsetExists(mixed $offset): mixed
+    public function offsetExists($offset): bool
     {
-        return isset($this->container[$offset]);
+        return (bool) isset($this->container[$offset]);
     }
 
     /**
