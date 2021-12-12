@@ -33,9 +33,13 @@
         "friendsofphp/php-cs-fixer": "~2.14"
     },
     "autoload": {
-        "psr-4": { "GateApi\\" : "src/" }
+        "psr-4": {
+            "GateApi\\": "src/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "GateApi\\" : "test/" }
+        "psr-4": {
+            "GateApi\\": "test/"
+        }
     }
 }
