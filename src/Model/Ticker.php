@@ -594,7 +594,7 @@ class Ticker implements ModelInterface, ArrayAccess
      */
 
     #[\ReturnTypeWillChange]
-    public function offsetExists(mixed $offset): bool
+    public function offsetExists(mixed $offset): mixed
     {
         return isset($this->container[$offset]);
     }
